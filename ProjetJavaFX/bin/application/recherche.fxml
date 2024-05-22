@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #F0FFF0;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.recherchecontroller">
+    <top>
+        <VBox alignment="CENTER" style="-fx-padding: 20px;">
+            <Label style="-fx-font-size: 24px;" text="Recherche de Maladies" />
+            <TextField fx:id="searchField" promptText="Entrez le nom d'une maladie" style="-fx-prompt-text-fill: gray; -fx-padding: 10px;" />
+        </VBox>
+    </top>
+    <bottom>
+        <TableView fx:id="tableHerbes" style="-fx-padding: 20px;">
+            <columns>
+                <TableColumn fx:id="idCol" prefWidth="50" text="ID" />
+                <TableColumn fx:id="emplacementCol" prefWidth="100" text="Emplacement" />
+                <TableColumn fx:id="commentBoireCol" prefWidth="150" text="Comment Boire" />
+                <TableColumn fx:id="nombreFoisCol" prefWidth="100" text="Nombre de Fois" />
+                <TableColumn fx:id="maladieCol" prefWidth="100" text="Maladie" />
+                <TableColumn fx:id="nomCol" prefWidth="100" text="Nom" />
+            </columns>
+        </TableView>
+    </bottom>
+    <left>
+        <VBox alignment="CENTER" style="-fx-padding: 20px;">
+            <Button fx:id="ajoutmaladie" onAction="#ajoutmaladieAction" style="-fx-background-color: #8FBC8F; -fx-text-fill: white; -fx-padding: 20px;" text="Ajouter Maladie" />
+        </VBox>
+    </left>
+   <right>
+        <Button fx:id="rechercherButton" onAction="#rechercherAction" style="-fx-background-color: #8FBC8F; -fx-text-fill: white; -fx-padding: 20px;" text="Rechercher" BorderPane.alignment="CENTER" />
+   </right>
+   <center>
+         <Button fx:id="comparaisonButton" onAction="#comparaisonAction" prefHeight="50.0" prefWidth="162.0" style="-fx-background-color: #8FBC8F; -fx-text-fill: white; -fx-padding: 10px;" text="Comparer" BorderPane.alignment="CENTER" />
+   </center>
+</BorderPane>
